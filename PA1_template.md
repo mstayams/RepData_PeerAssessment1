@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -32,7 +37,7 @@ colnames(total_steps_per_day) = c("day","total_steps")
 hist(total_steps_per_day$total_steps, main = "Total steps per day(NAs Omitted)", xlab = "steps",ylab="Frequency (Number of Days)",col="grey")
 ```
 
-![](PA1_template_files/figure-html/compute_mean_median-1.png) 
+![plot of chunk compute_mean_median](figure/compute_mean_median-1.png) 
 
 ```r
 ###dev.off()
@@ -81,7 +86,7 @@ plot(avg_interval_activity$x~avg_interval_activity$Group.1,type="l",main = "Aver
      ylab = "Average across all Days", xlab = "5-minute interval",col = "blue")
 ```
 
-![](PA1_template_files/figure-html/activity_pattern-1.png) 
+![plot of chunk activity_pattern](figure/activity_pattern-1.png) 
 
 ```r
 # 2- which five minute interval contains the maximum number of steps?
@@ -150,7 +155,7 @@ colnames(total_steps_per_day_fill) = c("date","total_steps")
 hist(total_steps_per_day_fill$total_steps, main = "Total steps per day (NA Imputed)", xlab = "steps",col="grey")
 ```
 
-![](PA1_template_files/figure-html/missing_values-1.png) 
+![plot of chunk missing_values](figure/missing_values-1.png) 
 
 ### What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
@@ -160,7 +165,7 @@ hist(total_steps_per_day$total_steps, main = "Total steps per day(NAs Omitted)",
 hist(total_steps_per_day_fill$total_steps, main = "Total steps per day (NA Imputed)", xlab = "steps",col="grey")
 ```
 
-![](PA1_template_files/figure-html/impact-1.png) 
+![plot of chunk impact](figure/impact-1.png) 
 
 ### mean and median with NAs Omitted
 
@@ -234,5 +239,5 @@ plot(activity_weekend_interval_ts_a$x~activity_weekend_interval_ts_a$Group.1,typ
      xlab = "5-minute interval", ylab = "Average across weekends",col = "red")
 ```
 
-![](PA1_template_files/figure-html/week_day_end-1.png) 
+![plot of chunk week_day_end](figure/week_day_end-1.png) 
 
